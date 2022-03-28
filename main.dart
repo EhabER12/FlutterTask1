@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
         Container(
           decoration: const BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage('images/sanji.png'), fit: BoxFit.cover)),
+                  image: NetworkImage("https://wallpaper.dog/large/20522099.jpg"), fit: BoxFit.contain)),
           child: Container(
             decoration: const BoxDecoration(
                 gradient: LinearGradient(
@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
               style: ElevatedButton.styleFrom(
                 primary: c,
 
-                  maximumSize: Size(400, 40), minimumSize: Size(400, 40)),
+                  maximumSize: Size(MediaQuery.of(context).size.width, 40), minimumSize: Size(MediaQuery.of(context).size.width, 40)),
               onPressed: () {
                 setState(() {
                   c=Colors.blue;
